@@ -28,10 +28,7 @@ void EventManager::addListener(shared_ptr<EventListener>& listener)
     if(it == m_listeners.end())
     {
         m_listeners.push_back(listener);
-
     }
-
-
 }
 
 void EventManager::removeListener(shared_ptr<EventListener>& listener)
@@ -42,7 +39,7 @@ void EventManager::removeListener(shared_ptr<EventListener>& listener)
     });
     if(it != m_listeners.end())
     {
-    m_listeners.erase(it);
+        (it)->reset();
+        m_listeners.erase(it);
     }
-
 }

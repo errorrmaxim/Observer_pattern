@@ -59,7 +59,8 @@ int main(int argc, char *argv[])
 
     Mng->removeListener(evListener3);
 
-    Mng->publishEvent(start);
+
+    Mng->publishEvent(stop);
 
 
 
